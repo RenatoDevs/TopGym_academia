@@ -16,23 +16,26 @@ class MobileNavBar{
                 
         });
     }
-
+    addClickEventLinks(){
+        this.navLinks.forEach((link) => {
+            link.addEventListener('click', ()=>{
+                this.handleClick()
+            })
+        })
+    }
     handleClick(){
-        console.log(this);
         this.navList.classList.toggle(this.activeClass);
         this.mobileMenu.classList.toggle(this.activeClass);
         //animação dos links
         this.animateLinks();
     }
-
-
     addClickEvent(){
         this.mobileMenu.addEventListener("click", this.handleClick);
     }
-
     init(){
         if(this.mobileMenu){
             this.addClickEvent();
+            this.addClickEventLinks();
         }
         return this;
     }

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./menuBar/mobileNavBarStyle.css">
+    <link rel="stylesheet" href="./swiper.css">
+    <link rel="icon" type="image/png" href="./images/icon.png" class="icon-aba"/>
     <title>TopGym</title>
 </head>
 
@@ -15,21 +17,28 @@
     <div class="container">
         <header>
             <nav class="menu">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
                 <div class="mobileMenu">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-    
+
                 <ul class="navList page-menu">
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#sb">Horários</a></li>
-                    <li><a href="#ap">Sobre</a></li>
-                    <li><a href="#gl">Galeria</a></li>
+                    <li><a href="#training">Treinos</a></li>
+                    <li><a href="#about">Sobre nós</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#choose">Por que?</a></li>
+                    <li><a href="#program-price">Planos</a></li>
+                    <li><a href="#bmi">IMC</a></li>
+                    <li><a href="#footer">Unidades</a></li>
                 </ul>
             </nav>
             <div class="banner">
-                <div class="swiper mySwiper">
+                <div class="swiper swiperBanner">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="box-tittle-banner">
@@ -95,7 +104,7 @@
                         equilibrada para que possa obter o corpo do seu sonho em breve !!</span>
                 </div>
             </section>
-            <section class="training">
+            <section id="training" class="training">
                 <div class="train">
                     <img src="./images/hayley-kim-design-eot-ka5dM7Q-unsplash.jpg" alt="">
                     <h2>fitness</h2>
@@ -113,7 +122,7 @@
                     <h2>cardio</h2>
                 </div>
             </section>
-            <section class="about">
+            <section id="about" class="about">
                 <div class="box-section">
                     <h1 class="tittle-section">quem nós somos</h1>
                     <p class="paragraph-section">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
@@ -129,45 +138,57 @@
 
                 <button class="bt-training">Avaliação Gratuita</button>
             </section>
-            <section class="galery">
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
+            <section id="gallery" class="gallery">
+                <h1 class="tittle-section">Galery</h1>
+                <div class="box">
+                    <span class="face">
+                        <img src="./images/sushil-ghimire-5UbIqV58CW8-unsplash.jpg" alt="">
+                    </span>
+                    <span class="face">
+                        <img src="./images/sushil-ghimire-5UbIqV58CW8-unsplash.jpg" alt="">
+                    </span>
+                    <span class="face">
+                        <img src="./images/sushil-ghimire-5UbIqV58CW8-unsplash.jpg" alt="">
+                    </span>
+                    <span class="face">
+                        <img src="./images/sushil-ghimire-5UbIqV58CW8-unsplash.jpg" alt="">
+                    </span>
                 </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
-                <div class="img-galery">
-                    <img src="./images/pesos.jpg" alt="" class="img-galery">
-                </div>
+                <!-- <div class="swiper swiperGallery">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide ">
+                            <img src="./images/sushil-ghimire-5UbIqV58CW8-unsplash.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide ">
+                            <img src="./images/bastien-plu-75HNc6SPdG8-unsplash.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide ">
+                            <img src="./images/edgar-chaparro-sHfo3WOgGTU-unsplash.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide ">
+                            <img src="./images/hayley-kim-design-eot-ka5dM7Q-unsplash.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide ">
+                            <img src="./images/aaron-brogden-miCR9VIQ5PE-unsplash.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide ">
+                            <img src="./images/samuel-girven-2e4lbLTqPIo-unsplash.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide ">
+                            <img src="./images/spencer-davis-0ShTs8iPY28-unsplash.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide ">
+                            <img src="./images/john-fornander-TAZoUmDqzXk-unsplash.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide ">
+                            <img src="./images/pesos.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div> -->
             </section>
-            <section class="choose">
+            <section id="choose" class="choose">
                 <div class="box-section">
                     <h1 class="tittle-section">porque nos escolher</h1>
                     <p class="paragraph-section">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ab
@@ -182,7 +203,7 @@
                     <span class="description-counter"></span>
                 </div>
             </section>
-            <section class="program-price">
+            <section id="program-price" class="program-price">
                 <h1 class="tittle-section">Programa de Treinos</h1>
                 <div class="box-price">
 
@@ -243,10 +264,10 @@
                 </div>
 
             </section>
-            <!-- <section class="coaches">
+            <!-- <section id="coaches" class="coaches">
 
             </section> -->
-            <section class="bmi">
+            <section id="bmi" class="bmi">
                 <h1 class="tittle-section">Calcule o seu IMC</h1>
                 <div class="calculator">
                     <div class="calculator-insert">
@@ -254,7 +275,7 @@
                             <div class="calculator-range">
                                 <div class="range-number">
                                     <span class="number-view" id="height-number" type="number">187</span>
-                                <span class="number-description">Altura - cm</span>
+                                    <span class="number-description">Altura - cm</span>
                                 </div>
                                 <div class="range-description">
                                     <span class="value-start">100 cm</span>
@@ -266,9 +287,8 @@
 
                             <div class="calculator-range">
                                 <div class="range-number">
-                                    <span class="number-view" id="weight-number"
-                                    type="number">70</span>
-                                <span class="number-description">Peso - Kg</span>
+                                    <span class="number-view" id="weight-number" type="number">70</span>
+                                    <span class="number-description">Peso - Kg</span>
                                 </div>
                                 <div class="range-description">
                                     <span class="value-start">20 kg</span>
@@ -293,7 +313,7 @@
                 </div>
             </section>
         </main>
-        <footer>
+        <footer id="footer">
             <ul class="social">
                 <li>
                     <ion-icon name="logo-facebook"></ion-icon>
@@ -309,7 +329,7 @@
                 </li>
             </ul>
             <div class="logo">
-                <ion-icon name="barbell-outline"></ion-icon>
+                <img src="./images/logo.png" alt="">
             </div>
             <ul class="location-list">
                 <li class="location-item">

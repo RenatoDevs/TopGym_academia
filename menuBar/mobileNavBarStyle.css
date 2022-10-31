@@ -1,21 +1,60 @@
+.menu,
+.page-menu,
+.page-menu li,
+.navList,
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .logo{
     position: relative;
-    width: 240px;
-    margin: 10px;
+    width: 30px;
+    margin:0 20px;
     display: block;
-    z-index: 1000;
 }
 .logo img{
     width: 100%;
 }
-.logoText{
-    position: relative;
-    width: 240px;
-    margin: 10px;
-    display: block;
-    z-index: 1000;
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 4vh;
+    justify-content: space-between;
+    backdrop-filter: blur(2px);
+    transition: .3s ease-in-out;
+    padding: 4px;
+}
+.menu.sticky{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.page-menu {
+    list-style: none;
+    height: 100%;
+}
+
+.page-menu li{
+    height: 100%;
+    cursor: pointer;
     color: #fff;
-    font-size:30px;
+    font-weight: 800;
+    font-size: .8rem;
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+    
+}
+.social li:hover,
+.page-menu li:hover {
+    color: #000;
+    background-color: #fff;
+}
+.social li:hover,
+.page-menu li:hover a {
+    color: #000;
 }
 .navList{
     list-style: none;
@@ -24,7 +63,7 @@
 .navList li {
     letter-spacing: 3px;
     margin-left: 32px;
-    font-size: 20px;
+    font-size: 13px;
 }
 .mobileMenu{
     cursor: pointer;
@@ -47,21 +86,30 @@
 }
 
 @media (max-width:999px){
+
     body{
         overflow-x: hidden;
     }
+    .page-menu li{
+        width:50%;
+        font-size: 1.2rem;
+    }
+    .menu{
+        height: 5vh;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
     .navList{
         position: absolute;
+        padding: 5px;
         top:0;
         right: 0;
+        margin-top:4.93vh;
         width: 100vw;
-        height: 100vh;
+        height: 96vh;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
-        background-color:rgba(0, 0, 0, 0.849) ;
+        background-color:rgba(0, 0, 0, 0.7) ;
         backdrop-filter: blur(2px);
         z-index: 99;
     }
