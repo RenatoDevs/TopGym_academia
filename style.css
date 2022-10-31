@@ -34,6 +34,7 @@ header,
 section,
 footer,
 .social,
+.social li,
 .tittle-banner,
 .box-tittle-banner,
 .gallery,
@@ -53,6 +54,7 @@ footer,
 .location-list,
 .address-item,
 .location-list,
+.box-logo-footer,
 .dev {
     display: flex;
     justify-content: center;
@@ -60,13 +62,11 @@ footer,
     list-style: none;
 
 }
-
 header {
     width: 100%;
     min-height: 100vh;
     flex-direction: column;
 }
-
 .container {
     max-width: 100%;
     min-height: 100vh;
@@ -74,21 +74,53 @@ header {
     flex-direction: column;
     position: relative;
 }
-
 section {
     width: 100%;
     min-height: 50vh;
     flex-direction: column;
     padding: 30px 0;
 }
+.box-logo-footer{
+    max-width: 350px;
+}
+.box-logo-footer> .social{
+    width: 200px;
+    padding: 15px;
+    font-size: 2rem;
+    justify-content: space-evenly;
+}
+.box-logo-footer> .social::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(99, 99, 99, 0.8);
+    left: 10px;
+    width: 330px;
+    border-radius: 30px;
+    height: 70%;
+    font-size: 2rem;
+}
+.social li{
+    padding: 5px;
+    z-index: 10;
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+}
+.social li:hover,
+.page-menu li:hover {
+    color: #000;
+    background-color: #fff;
 
+}
+.social li:hover,
+.page-menu li:hover a {
+    color: #000;
+}
 /*          Banner          */
 .banner {
     width: 100%;
     min-height: 90vh;
     position: relative;
 }
-
 .box-tittle-banner {
 
     background: rgb(41, 41, 41);
@@ -106,7 +138,6 @@ section {
     transform: translate(-50%, -50%);
     color: rgba(255, 255, 255, 0.658);
 }
-
 .box-tittle-banner h1,
 .box-tittle-banner h2 {
     font-family: var(--monument);
@@ -121,7 +152,6 @@ section {
 .box-tittle-banner p {
     color: rgb(236, 236, 236);
 }
-
 .bt-training {
     width: 100%;
     max-width: 200px;
@@ -133,11 +163,9 @@ section {
     margin: 20px 0;
     font-weight: bold;
 }
-
 .tittle-banner {
     flex-direction: column;
 }
-
 .salutation {
     max-width: 1000px;
     padding: 30px;
@@ -147,7 +175,6 @@ section {
     font-family: var(--mukta);
     position: relative;
 }
-
 .salutation::after {
     content: '❝';
     position: absolute;
@@ -160,7 +187,6 @@ section {
     font-family: 'Secular One', sans-serif;
 
 }
-
 .salutation::before {
     content: '❞';
     position: absolute;
@@ -178,7 +204,6 @@ section {
     flex-direction: row;
     min-height: 10vh;
 }
-
 .train {
     flex: 1 1 400px;
     position: relative;
@@ -552,7 +577,26 @@ footer {
     padding: 10px 0;
     font-weight: bold;
 }
-
+.box-logo-footer{
+    position: relative;
+}
+.box-logo-footer .logo{
+    position: relative;
+    width: 100px;
+    z-index: 1;
+}
+.box-logo-footer .logo::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: rgba(99, 99, 99, 1);
+    z-index: -1;
+}
 .dev {
     justify-content: space-around;
     width: 100%;
