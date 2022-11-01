@@ -22,10 +22,10 @@ var swiperGalery  = new Swiper(".swiperGallery", {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    // autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
     coverflowEffect: {
       rotate: 50,
       stretch: 0,

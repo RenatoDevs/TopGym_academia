@@ -21,7 +21,7 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    --swiper-theme-color:#007aff
+    --swiper-theme-color:#007aff;
 }
 
 .banner> .swiper .swiper-slide img {
@@ -31,8 +31,6 @@
     object-fit: cover;
     object-position: top;
 }
-
-
 /*          Swiper Gallery         */
 
 .gallery> .swiper {
@@ -49,7 +47,7 @@
     background-size: cover;
     width: 300px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgb(51, 51, 51);
+
     position: relative;
   }
 
@@ -91,6 +89,17 @@
     
   }
 
+  .gallery> .swiper .swiper-pagination{
+    position: absolute;
+    background-color: aliceblue;
+    max-width: 200px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: space-evenly;
+  }
   @media (max-width:450px) {
     .gallery> .swiper  .swiper-slide {
         width: 250px;

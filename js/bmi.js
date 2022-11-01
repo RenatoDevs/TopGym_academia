@@ -100,3 +100,13 @@ function result() {
     boxResult.style.background = groupBmi[bmi].color;
 }
 calc.addEventListener('click', result);
+
+const btDev = document.querySelector('.bt-dev');
+const devArea = document.querySelector('.dev')
+
+function expand() {
+    devArea.classList.toggle('active')
+    console.log('clicou')
+}
+
+btDev.addEventListener('click', expand);

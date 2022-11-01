@@ -48,4 +48,10 @@ const mobileNavBar = new MobileNavBar(
     ".navList li"
 );
 
+let menuLight = document.querySelector('.menu');
+
+window.addEventListener('scroll', () =>{
+    menuLight.classList.toggle('sticky', window.scrollY > 0);
+})
+
 mobileNavBar .init();
