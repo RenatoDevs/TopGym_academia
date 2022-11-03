@@ -27,7 +27,7 @@
                 </div>
 
                 <ul class="navList page-menu">
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#init">Inicio</a></li>
                     <li><a href="#training">Treinos</a></li>
                     <li><a href="#about">Sobre nós</a></li>
                     <li><a href="#gallery">Galeria</a></li>
@@ -37,7 +37,10 @@
                     <li><a href="#footer">Unidades</a></li>
                 </ul>
             </nav>
-            <div class="banner">
+            <div id='init' class="banner">
+                <button class="bt-top">
+                    <ion-icon name="arrow-up-sharp"></ion-icon>
+                </button>
                 <div class="swiper swiperBanner">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -94,7 +97,8 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </header>
+        </header> 
+        
         <main>
             <section class="testimonial">
                 <div class="salutation">
@@ -139,10 +143,9 @@
                 <button class="bt-training">Avaliação Gratuita</button>
             </section>
             <section id="gallery" class="gallery">
-                <h1 class="tittle-section">Galery</h1>
+                <h1 class="tittle-section">Gallery</h1>
                 <div class="swiper swiperGallery">
                     <div class="swiper-wrapper">
-
                         <div class="swiper-slide ">
                             <img src="./images/sushil-ghimire-5UbIqV58CW8-unsplash.jpg" alt="">
                         </div>
@@ -253,14 +256,15 @@
             <section id="coaches" class="coaches">
                 <h1 class="tittle-section">Nossos Profissionais</h1>
                 <div class="grid-coaches">
-                    <div class="box-coache">
-                        <div class="img-coache">
-                            <img src="./images/coache_1.png" alt="">
+                    <div class="box-coach">
+                        <div class="img-coach">
+                            <img src="./images/coach_1.png" alt="">
                         </div>
-                        <div class="coache-informations">
-                            <h2 class="name-coache">Carlos Vilagran</h2>
-                            <p class="coache-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit eligendi nesciunt? Eum rerum, explicabo.
+                        <div class="coach-informations">
+                            <h2 class="name-coach">Carlos Vilagran</h2>
+                            <p class="coach-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit eligendi
+                                nesciunt? Eum rerum, explicabo.
                             </p>
                             <ul class="social">
                                 <li>
@@ -278,14 +282,15 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="box-coache">
-                        <div class="img-coache">
-                            <img src="./images/coache_21.png" alt="">
+                    <div class="box-coach">
+                        <div class="img-coach">
+                            <img src="./images/coach_21.png" alt="">
                         </div>
-                        <div class="coache-informations">
-                            <h2 class="name-coache">Ramón Valdes</h2>
-                            <p class="coache-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit eligendi nesciunt? Eum rerum, explicabo.
+                        <div class="coach-informations">
+                            <h2 class="name-coach">Ramón Valdes</h2>
+                            <p class="coach-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit eligendi
+                                nesciunt? Eum rerum, explicabo.
                             </p>
                             <ul class="social">
                                 <li>
@@ -302,16 +307,17 @@
                                 </li>
                             </ul>
                         </div>
-                        
+
                     </div>
-                    <div class="box-coache">
-                        <div class="img-coache">
-                            <img src="./images/coache_in_black.png" alt="">
+                    <div class="box-coach">
+                        <div class="img-coach">
+                            <img src="./images/coach_in_black.png" alt="">
                         </div>
-                        <div class="coache-informations">
-                            <h2 class="name-coache">Florinda Meza</h2>
-                            <p class="coache-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit eligendi nesciunt? Eum rerum, explicabo.
+                        <div class="coach-informations">
+                            <h2 class="name-coach">Florinda Meza</h2>
+                            <p class="coach-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit eligendi
+                                nesciunt? Eum rerum, explicabo.
                             </p>
                             <ul class="social">
                                 <li>
@@ -329,14 +335,15 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="box-coache">
-                        <div class="img-coache">
+                    <div class="box-coach">
+                        <div class="img-coach">
                             <img src="./images/prof1.png" alt="">
                         </div>
-                        <div class="coache-informations">
-                            <h2 class="name-coache">Édga Vivar</h2>
-                            <p class="coache-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit eligendi nesciunt? Eum rerum, explicabo.
+                        <div class="coach-informations">
+                            <h2 class="name-coach">Édga Vivar</h2>
+                            <p class="coach-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit eligendi
+                                nesciunt? Eum rerum, explicabo.
                             </p>
                             <ul class="social">
                                 <li>
@@ -447,46 +454,54 @@
                     </ul>
                 </li>
             </ul>
-            <div class="dev">
-                <div class="dev-line">
-
-                    <button class="bt-dev">
-                        <ion-icon name="arrow-down-outline"></ion-icon>
-                    </button>
-                    <span class="dev-name">Desenvolvido por Renato dos Santos 😉</span>
-                    
-                </div>
+            <div class="dev-line">
+                <button class="bt-dev">
+                    <ion-icon name="arrow-down-outline"></ion-icon>
+                </button>
+                <span class="dev-name">Desenvolvido por Renato dos Santos 😉</span> 
+            </div>
+            <div class="dev ">
+        
                 <div class="dev-information">
-                    <img src="https://avatars.githubusercontent.com/u/90292478?s=400&u=bf235ee321e03d546774b679eff07bbe36058923&v=4" alt="">
-                    <div class="dev-line">
-                        <h2></h2>
-                    <p>Olá, fico feliz por ter chegado até aqui, abaixo deixarei alguns links, caso queira conversar será um prazer !!!</p>
-
-                    <ul class="social-dev">
-                        <li>
-                            <a href="https://www.linkedin.com/in/renato-santos-693568127/" ><ion-icon name="logo-linkedin" target="_blank"></ion-icon>
-                                Linkedin
-                            </a>
-                            
-                        </li>
-                        <li>
-                            <a href="https://github.com/RenatoDevs"><ion-icon name="logo-github" target="_blank"></ion-icon>
-                                Github
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/RenatoDevs">
-                                <ion-icon name="cafe-outline"></ion-icon>
-                                Portifólio
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="dev-img">
+                        <img src="https://avatars.githubusercontent.com/u/90292478?s=400&u=bf235ee321e03d546774b679eff07bbe36058923&v=4"
+                    alt="">
+                    </img>
+                    </div>
+                    <div class="dev-info">
+                        <h2>Olá, fico feliz por ter chegado até aqui !!</h2>
+                        <ul class="social-dev">
+                            <li>
+                                <p>Por aqui podemos conversar, será um prazer te-lô em minha rede.</p>
+                                <a href="https://www.linkedin.com/in/renato-santos-693568127/">
+                                    <ion-icon name="logo-linkedin" target="_blank"></ion-icon>
+                                    Linkedin
+                                </a>
+                            </li>
+                            <li>
+                                <p>Já por aqui, você poderá ver e acompanhar o desenvolvimento dos meus projetos. </p>
+                                <a href="https://github.com/RenatoDevs">
+                                    <ion-icon name="logo-github" target="_blank"></ion-icon>
+                                    Github
+                                </a>
+                            </li>
+                            <li>
+                                <p>E por aqui Você verá todos os meus Projetos e conhecer mais sobre mim !!!</p>
+                                <a href="https://renatosantos.netlify.app/">
+                                    <ion-icon name="cafe-outline"></ion-icon>
+                                    Portifólio
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-           
-        </footer>
     </div>
+
+    </footer>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/scroll.js"></script>
     <script src="./menuBar/mobileNavBar.js"></script>
     <script src="./js/bmi.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
