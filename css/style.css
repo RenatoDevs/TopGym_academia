@@ -813,7 +813,7 @@ footer> .tittle-section{
     justify-content: center;
     position: relative;
     flex-direction: column;
-    flex: 1 1 100px;
+    flex: 1 1 350px;
     margin: 0 10px ;
 }
 .social-dev li a{
