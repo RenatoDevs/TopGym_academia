@@ -6,7 +6,6 @@ class MobileNavBar{
         this.activeClass = "activeMenu";
         //usando metodo bind para o this não perder a referencia
         this.handleClick = this.handleClick.bind(this);
-
     }
     animateLinks(){
         this.navLinks.forEach((link,index) =>{
@@ -49,9 +48,8 @@ const mobileNavBar = new MobileNavBar(
 );
 
 let menuLight = document.querySelector('.menu');
-
 window.addEventListener('scroll', () =>{
     menuLight.classList.toggle('sticky', window.scrollY > 0);
 })
 
-mobileNavBar .init();
+mobileNavBar.init();

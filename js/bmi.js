@@ -75,7 +75,7 @@ function classificationBmi() {
         classification = 3;
     } else if (bmi < 39) {
         classification = 4;
-    } else if (bmi > 40) {
+    } else if (bmi > 39) {
         classification = 5;
     }
 

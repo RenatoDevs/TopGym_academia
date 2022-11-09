@@ -1,5 +1,3 @@
-
-
 const btDev = document.querySelector('.bt-dev');
 const devArea = document.querySelector('.dev');
 const btTop = document.querySelector('.bt-top');
@@ -23,7 +21,6 @@ function scrollToTopOnclick(){
         top:top,
         behavior:'smooth'
     })
-    btTopLocation()
 }
 
 btTop.addEventListener('click', scrollToTopOnclick)

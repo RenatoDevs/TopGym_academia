@@ -20,6 +20,20 @@
     font-weight: normal;
     font-style: normal;
 }
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--black);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 2px solid;
+}
+
 
 .container,
 header,
@@ -112,7 +126,7 @@ section {
     color: #fff;
     font-size: 2rem;
     position: fixed;
-    z-index: 10;
+    z-index: 1;
     width: 50px;
     height: 50px;
     bottom: 0;
@@ -632,7 +646,7 @@ section {
 /*           Footer             */
 footer {
     width: 100%;
-    min-height: 80vh;
+    min-height: 95vh;
     background: url(../images/anastase-maragos-9dzWZQWZMdE-unsplash.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -649,7 +663,6 @@ footer {
     min-height: 50vh;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
 }
 
 .location-item {
@@ -689,51 +702,32 @@ footer {
 
 .box-logo-footer {
     position: relative;
-}
-
-.box-logo-footer .logo {
-    position: relative;
-    width: 100px;
-    z-index: 1;
-}
-
-.box-logo-footer .logo::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
+    background-color: rgb(59, 59, 59);
     border-radius: 50%;
-    background-color: rgb(58, 58, 58);
-    z-index: -1;
+    padding: 15px;
+    transition: .5s ease-in-out;
 }
+.box-logo-footer .logo{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow:  0 0 10px rgb(0, 0, 0);
+    filter: contrast(120%);
+    transition: .5s ease-in-out;
+}
+.box-logo-footer:hover {
+    background-color: rgb(214, 214, 214);
+    box-shadow: 0 0 10px #fff;
+}
+.box-logo-footer:hover .logo{
+    filter: brightness(120%);
+}
+
+
 
 footer>.tittle-section {
     margin: 30px 0;
-}
-
-.box-logo-footer {
-    max-width: 350px;
-}
-
-.box-logo-footer>.social {
-    width: 200px;
-    padding: 15px;
-    font-size: 2rem;
-    justify-content: space-evenly;
-}
-
-.box-logo-footer>.social::before {
-    content: '';
-    position: absolute;
-    background-color: rgba(99, 99, 99, 0.8);
-    left: 10px;
-    width: 330px;
-    border-radius: 30px;
-    height: 70%;
-    font-size: 2rem;
 }
 
 /*      Area Dev        */
@@ -752,22 +746,31 @@ footer>.tittle-section {
 .dev {
     flex-direction: column;
     width: 100%;
-
     height: 0;
     background-color: rgba(0, 43, 134, 0.658);
+    justify-content: flex-start;
     transition: 1s ease-in-out;
     overflow: hidden;
     position: relative;
+    display: none;
 }
 
 .dev.active {
-    height: 40vh;
+    animation: height .8s forwards ease-in-out;
+    display: flex;
     transition: 1s ease-in-out;
+}
+@keyframes height {
+    from{
+        height: 0;
+    }
+    to{
+        height: 30vh;
+    }
 }
 
 .dev-line {
     width: 100%;
-    justify-content: center;
     gap: 30px;
     padding: 5px 0;
     background-color: rgb(0, 31, 116);
@@ -800,16 +803,16 @@ footer>.tittle-section {
 }
 
 .dev-information {
-    max-width: 1300px;
+    max-width: 600px;
     justify-content: space-around;
     margin: 0 auto;
-    flex-wrap: wrap;
-    width: 95%;
+    /* flex-wrap: wrap; */
+    width: 100%;
     border-radius: 10px;
 }
 
 .dev-img {
-    max-width: 150px;
+    max-width: 130px;
     background-color: rgba(107, 107, 107, 0.2);
     border-radius: 15px;
     padding: 10px;
@@ -829,19 +832,17 @@ footer>.tittle-section {
 .dev-info {
     margin: 10px;
     flex: 1 1 600px;
-    padding: 10px;
     border-radius: 15px;
-    justify-content: space-evenly;
     flex-direction: column;
     text-align: center;
     background-color: rgba(107, 107, 107, 0.2);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     backdrop-filter: blur(5px);
-    min-height: 150px;
+    height: 130px;
 }
 
-.dev-info h2 {
+/* .dev-info h2 {
     width: 100%;
     padding: 15px;
     border-radius: 10px;
@@ -849,16 +850,16 @@ footer>.tittle-section {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     color: #fff;
-}
+} */
 
 .social-dev {
     font-size: 1.1rem;
     width: 100%;
+    height: 100%;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: rgba(107, 107, 107, 0.2);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     padding: 10px;
@@ -867,8 +868,7 @@ footer>.tittle-section {
 }
 
 .social-dev li {
-    flex: 1 1 120px;
-    height: 40px;
+    width: 100%;
     font-size: 1.3rem;
     font-weight: bold;
     display: flex;
@@ -994,17 +994,9 @@ footer>.tittle-section {
     .salutation {
         font-size: 1.2rem;
     }
-
-    .dev.active {
-        height: 65vh;
-    }
 }
 
 @media (max-height:400px) {
-
-    .dev.active {
-        height: 100vh;
-    }
 
     .box-tittle-banner h1,
     .box-tittle-banner h2 {
